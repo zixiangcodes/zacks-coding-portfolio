@@ -1,0 +1,47 @@
+How to Update / Add New Project Link and Info (Latest):
+----
+1.Go to index html and add / update the relevant Project Cards.. (see <div class="projects-grid"> that's where the projects are)
+Note: See "Empty Slide Test" as an example.
+
+2. Go to loading_url_firebase.js.
+
+3. Update the following below:
+// 1a. Project IDs to load
+// 1b. Other link IDs to update (if necessary)
+// 2. Helper function to get project name from id (placeholder)
+// 3. Fetch project titles and descriptions
+
+4. Go to this website: https://firebase.google.com/docs/database
+
+5. Click on "Go to Console"
+
+6. Then, click on "Coding Portfolio Database"
+
+7. Next, click on "Realtime Database" on the left sidebar.
+
+8. Update the media and URL links as per the format.
+
+9. You're done!
+
+How to Save Files and Deploy to Netlify:
+----
+- Once you're happy with the changes, then save the files.
+- Make a copy of the folder as a zip file.
+- Meanwhile, upload the coding portfolio to Netlify (remember to login) manually.
+- Wait for it to deploy and that's it!
+----
+
+//
+//
+//
+//
+
+How to Update / Add New Link (Old for reference):
+----
+- Find for <div class="slider"> in index.html
+- Add new slide div and relevant info
+- Go to loading_url_firebase.js, add add according to these steps
+// 1. MEDIA
+// 2. UPDATE IMAGE SOURCE with the value from the database
+// 3. LINKS
+// 4. Update the links with the values from the database

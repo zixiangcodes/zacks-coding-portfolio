@@ -1,0 +1,42 @@
+Hi Claude. I initially had a coding portfoilo that is made using JS, CSS and HTML. Very basic stuff. Additionally, some elements are connected to Firebase Realtime Database.
+
+Here is the file structure of my coding portfolio:
+
+Root Folder:
+index.html
+package.json
+
+"css" folder:
+background_images.css
+container.css
+size_slideshow.css
+size_website.css
+slideshow.css
+squares.css
+styles.css
+root.css
+
+"JS" folder:
+script.js
+modern.js
+loading_url_firebase.js
+
+"images" folder:
+various images
+
+So, I want to modernize the website so it looks amazing. I've made an attempt using another AI tool. It seems satisfactory aso far.
+
+However, there seems to be an issue. The modern card system displaying my projects isn't showing up. This is what I see when I test using http-server on my console.  The rest seem to appear just alright.
+
+Would you be able to help me do that? 
+
+What do I need to provide to you first?
+
+
+background_images.css
+container.css
+size_slideshow.css (not in use)
+size_website.css
+slideshow.css
+squares.css
+styles.css

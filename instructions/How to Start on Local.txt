@@ -1,0 +1,25 @@
+Notes:
+----
+- I keep forgetting how I viewed it offline.
+- Here are the steps below.
+----
+
+How to Start on Local:
+----
+1. Start up the console (eg: powershell, windows terminal etc.)
+
+2. Go to coding portfolio folder:
+Example: C:\Coding\Projects\1. Learn to code with AI with Guil Hernandez\0. My Coding Portfolio>
+
+3. Next, type "http-server" in the console.
+
+4. Open web browser and copy and paste one of the links available in the console:
+Example:
+
+Available on:
+  http://192.168.0.2:8080
+  http://127.0.0.1:8080
+  
+5. Enjoy!
+----
+

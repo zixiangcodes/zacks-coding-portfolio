@@ -1,0 +1,196 @@
+/* Main container for the slider */
+.slider {
+  position: relative;
+  /* Do not change to absolute. Must be relative */
+  overflow: hidden;
+  height: 700px;
+  /* Adjust the height as needed */
+  width: 1000px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.slider h3 {
+  font-size: 22px;
+}
+
+.slider p {
+  margin: 0;
+}
+
+/* Individual slides */
+.slide {
+  /*  position: absolute;*/
+  opacity: 0;
+  /* Initially hide all slides */
+  transition: opacity 0.5s ease;
+  /* Fade transition effect */
+  display: flex;
+  /* Use flexbox */
+  justify-content: space-around;
+  /* Adjust spacing between items */
+  align-items: center;
+  /* Align items vertically */
+}
+
+/* Active slide */
+.slide.active {
+  opacity: 1;
+}
+
+/* Image within each slide */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide-content {
+  position: absolute;
+  /* THIS MUST BE ABSOLUTE */
+  bottom: 0;
+  /* THIS MUST BE BOTTOM */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+  /* Semi-transparent background */
+  color: #fff;
+  padding: 20px;
+  z-index: 2;
+  /* Ensure project links are positioned above slide content */
+
+  /*IMPORTANT NOTE: */
+  /*do not put .slide-content a, it caused issues with the URL going to the last project URL*/
+}
+
+.slide-content h3 {
+  font-size: 16px;
+}
+
+
+/* 
+            <!-- Slide 13 -->
+            <div class="slide">
+              <img id="image_0013" src="#" alt="Poll App" onerror="this.onerror=null; this.src='images/S13_PollingApp.jpg';">
+              <div class="slide-content">
+                <h3>Polling App</h3>
+                <p>Simple Polling App to vote on things like lunch, places to go, colours etc. Uses Firebase Realtime Database.</p>
+                <div id="link_0013"><a class="links" href="#" target="_blank">[Link 13]</a></div>
+              </div>
+            </div> 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query for Smaller Smartphones */
+@media (max-width: 479px) {
+  /*    .container {
+        max-width: 360px;
+    }*/
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  .about-content img {
+    width: 80px;
+    height: 100px;
+  }
+
+  #contact-square {
+    padding: 5px;
+  }
+
+  #contact-square h3 {
+    font-size: 20px;
+  }
+
+  #contact-square p,
+  #contact-square div {
+    font-size: 14px;
+  }
+}
+
+
+/* Media Query for Smaller Smartphones */
+@media (max-width: 479px) {
+  .slider {
+    width: 325px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    /* Horizontal centering */
+    align-items: center;
+    /* Vertical centering */
+  }
+
+  .slide-content {
+    padding: 5px;
+  }
+
+  /* Media Query for even Smaller Smartphones */
+  @media (max-width: 420px) {
+    .slider {
+      width: 285px;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      /* Horizontal centering */
+      align-items: center;
+      /* Vertical centering */
+    }
+
+    .slide-content {
+      padding: 5px;
+    }
+
+    @media (max-width: 360px) {
+      .slider {
+        width: 200px;
+        height: 250px;
+        position: center;
+      }
+
+      .slide-content {
+        padding: 5px;
+        position: center;
+        font-size: 10px;
+      }
+
+    }

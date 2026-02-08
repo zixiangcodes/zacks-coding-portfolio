@@ -1,0 +1,56 @@
+/* BACKGROUND IMAGES  */
+#projects {
+    margin-top: -42px;
+    /* To adjust the top of the projects part, very irritating but it works as there was too much of the background at the top */
+}
+
+
+#projects {
+    background-image: url('../images/background_projects.jpg');
+    /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+
+}
+
+#about {
+    background-image: url('../images/background_about.jpg');
+    /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+}
+
+#skills {
+    background-image: url('../images/background_skills.jpg');
+    /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+}
+
+#contact {
+    background-image: url('../images/background_contact.jpg');
+    /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+}
+
+/*BACKGROUND */
+#about-background {
+    padding: 50px 0;
+    /* Adjust padding for top and bottom spacing */
+}
+
+#projects-background {
+    padding: 35px 0;
+    /* Adjust padding for top and bottom spacing */
+}
+
+#skills-background {
+    padding: 30px 0;
+    /* Adjust padding for top and bottom spacing */
+}
+
+#contact-background {
+    padding: 30px 0;
+    /* Adjust padding for top and bottom spacing */
+}

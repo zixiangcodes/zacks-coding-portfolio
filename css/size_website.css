@@ -1,0 +1,185 @@
+/* Media Query for Responsive Layout */
+
+/* For Tablets */
+@media (max-width: 1025px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container {
+        /*        max-width: 70%;*/
+        padding: 10px;
+        /* Reduce padding for small screens */
+    }
+
+    .about-content img {
+        width: 150px;
+        height: 180px;
+    }
+
+    #link_linkedin,
+    #link_wordpress,
+    #link_resume,
+    #link_email,
+    #link_github {
+        font-size: 16px;
+    }
+
+    .skill {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    #projects,
+    #about,
+    #skills,
+    #contact {
+        padding: 20px;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* For Smartphones */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .container {
+        /*        max-width: 60%;*/
+        padding: 10px;
+        /* Reduce padding for small screens */
+    }
+
+    .about-content img {
+        width: 120px;
+        height: 140px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #link_linkedin,
+    #link_wordpress,
+    #link_resume,
+    #link_email,
+    #link_github {
+        font-size: 15px;
+    }
+
+    .skill {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #projects,
+    #about,
+    #skills,
+    #contact {
+        padding: 20px;
+    }
+
+    .about-image {
+        margin-bottom: 0px;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+
+    /* Adjust header styles */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .container {
+        /*        max-width: 70%; */
+        /* Adjust as needed */
+        padding: 10px;
+        /* Reduce padding for small screens */
+    }
+
+    /* Adjust image size in about section */
+    .about-content img {
+        width: 120px;
+        height: 140px;
+    }
+
+    #link_linkedin,
+    #link_wordpress,
+    #link_resume,
+    #link_email,
+    #link_github,
+    #link_story1,
+    #link_story2,
+    #link_goodreads,
+    #link_tree,
+    #link_oldportfolio {
+        font-size: 14px;
+    }
+
+    #contact-text p {
+        font-size: 14px;
+    }
+
+    .skill {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #projects,
+    #about,
+    #skills,
+    #contact {
+        padding: 20px;
+    }
+
+    .copyright {
+        font-size: 0.9rem;
+    }
+
+}

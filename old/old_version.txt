@@ -1,0 +1,70 @@
+     <!-- Slide 3 -->
+            <div class="slide">
+              <img src="images/S3_Crypto.jpg" alt="Cryptocurrency Calculator">
+              <div class="slide-content">
+                <h3>Cryptocurrency Calculator</h3>
+                <p>For calculating profit, ROI and other nifty details. Initially for my own personal use.</p>
+                <p>Coded using purely Python and compiled using pyeInstaller.</p>
+                    <a href="https://github.com/zixiangcodes/Cryptocurrency_Calculator/releases/tag/V1.1" target="_blank">Link3</a>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+              <img src="images/S4_FaceBomp.jpg" alt="FaceBomp Game">
+              <div class="slide-content">
+                <h3>FaceBomp Game</h3>
+                <p>My 2nd attempt at making a more advance game.</p>
+                    <a href="https://65fea339fe5188dd8a75a094--majestic-duckanoo-793ab9.netlify.app/" target="_blank">Link4</a>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="slide">
+              <img src="images/S5_RPS.jpg" alt="Rock, Paper & Scissors">
+              <div class="slide-content">
+                <h3>Rock, Paper & Scissors</h3>
+                <p>My 1st initial attempt to make a very simple game</p>
+                    <a href="https://65fc1040cb1341009e4d7670--sage-sprinkles-0384aa.netlify.app/" target="_blank">Link5</a>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="slide">
+              <img src="images/S6_Gala.jpg" alt="Gale Invite">
+              <div class="slide-content">
+                <h3>Gala Invite</h3>
+                <p>An invitation to the gala with effects!</p>
+                    <a href="https://65dee89d334cc4b97064a144--velvety-squirrel-9e0477.netlify.app" target="_blank">Link6</a>
+              </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="slide">
+              <img src="images/S7_Sub.jpg" alt="Subscription">
+              <div class="slide-content">
+                <h3>Default</h3>
+                <p>Simple subscription page for Barker</p>
+                    <a href="https://65d5b6e3ec150570f53c169f--musical-pony-ab97c1.netlify.app" target="_blank">Link7</a>
+              </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="slide">
+              <img src="images/S8_Pizza.jpg" alt="Pizza Raffle">
+              <div class="slide-content">
+                <h3>Pizza Raffle</h3>
+                <p>Input names and the lucky person gets the lucky draw for pizza!</p>
+                    <a href="https://65df019c65aba100a74c8f2f--phenomenal-jalebi-814fcf.netlify.app" target="_blank">Link8</a>
+              </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="slide">
+              <img src="images/S9_DrumKit.jpg" alt="Groovy Soundkit">
+              <div class="slide-content">
+                <h3>Groovy Soundkit</h3>
+                <p>To demostrate sound effects by clicking on the button </p>
+                    <a href="https://65eeba4a0045e616da6f0bdf--cerulean-alfajores-541245.netlify.app" target="_blank">Link9</a>
+              </div>
+            </div>

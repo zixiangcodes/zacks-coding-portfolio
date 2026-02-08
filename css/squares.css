@@ -1,0 +1,57 @@
+/* Squares */
+#projects-square {
+    background-color: #fff;
+    border: 5px solid #ccc;
+    /* Adjust the border color and size as needed */
+    display: inline-block;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a slight shadow for better visibility */
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+}
+
+#about-square {
+    background-color: #fff;
+    border: 5px solid #ccc;
+    /* Adjust the border color and size as needed */
+    display: inline-block;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a slight shadow for better visibility */
+    margin-top: 35px;
+    margin-bottom: 20px
+}
+
+#skills-square {
+    background-color: #fff;
+    border: 5px solid #ccc;
+    /* Adjust the border color and size as needed */
+    display: inline-block;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a slight shadow for better visibility */
+}
+
+#contact-square {
+    background-color: #fff;
+    border: 5px solid #ccc;
+    /* Adjust the border color and size as needed */
+    display: inline-block;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a slight shadow for better visibility */
+}
+
+@media (max-width: 1025px) {
+
+    #projects-square,
+    #about-square,
+    #skills-square,
+    #contact-square {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

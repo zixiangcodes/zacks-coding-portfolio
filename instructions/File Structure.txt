@@ -1,0 +1,19 @@
+1. Root Folder:
+- index.html
+- package.json
+
+2. "css" folder:
+- background_images.css
+- container.css
+- size_slideshow.css
+- size_website.css
+- slideshow.css
+- squares.css
+- styles.css
+
+3. "JS" folder:
+- script.js
+- loading_url_firebase.js
+
+4. "images" folder:
+- various images

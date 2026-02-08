@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zack Ng's Coding Portfolio</title>
+  <!-- Custom Favicon -->
+  <link rel="icon" href="images/wandering_favicon.png" type="image/png">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Load CSS files -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/container.css">
+  <link rel="stylesheet" href="css/size_website.css">
+  <link rel="stylesheet" href="css/squares.css">
+  <link rel="stylesheet" href="css/background_images.css">
+  <link rel="stylesheet" href="css/modern_card.css">
+  <!-- Loads firebase script -->
+  <script src="js/loading_url_firebase.js" type="module" defer></script>
+  <!-- Load other scripts -->
+  <script type="module" src="js/script.js"></script>
+  <script src="js/modern.js"></script>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div id="top"></div>
+  <header>
+    <h1 class="title"><u><a href="#top">Zack's Coding Portfolio</a></u></h1>
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Projects Section with Card Layout -->
+  <section id="projects">
+    <div class="container">
+      <h3 class="project-section"><u class="project-intro">Projects</u></h3>
+      <p class="section-intro">These are my projects from the latest to the oldest ones.</p>
+      <div class="projects-grid">
+
+        <!-- Project Card 16 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0016" src="images/S16_ThinkBoard.jpg" alt="Mern ThinkBoard">
+          </div>
+          <div class="project-content">
+            <h4>Mern ThinkBoard</h4>
+            <p>My personal notepad app that uses the MERN stack! Uses Render for hosting, Tailwind + DaisyUI for CSS,
+              Redis via Upstash and is mobile friendly! I chose a synthwave theme to give it a distinctive feel and
+              vibe!
+            </p>
+            <div id="link_0016">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 15 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0015" src="images/S15_FacialRecognition.jpg" alt="Facial Recognition">
+          </div>
+          <div class="project-content">
+            <h4>Facial Recognition Smart Brain Project</h4>
+            <p>"My most advance project. Uses Clarifai's Facial Recognition API to detect human faces. Has a frontend
+              (Netlify), backend (Render) and database (Neon's Postgres). To start it, click on the <a
+                href='https://smartbrain-facialrecognition-api.onrender.com/' target='_blank'>backend URL link</a> here.
+              Then, click on the 'View Project' link below. The backend requires between 30 - 60 seconds to start due to
+              free web-hosting limitation. Otherwise, just click on 'Home' and insert an image url. This was actually an
+              old project with unidentifiable errors, but with Claude and Grok's help, I succeeded."
+            </p>
+            <div id="link_0015">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 14 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0014" src="images/S14_RailsWebsite.jpg" alt="Rails Website">
+          </div>
+          <div class="project-content">
+            <h4>Simple Rails Website</h4>
+            <p>Rails Website for learning. Uses Neon's Postgres Database and AWS. Hosted on Render. Requires between
+              30-60 seconds to start the website (due to free web-hosting limitation)</p>
+            <div id="link_0014">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 13 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0013" src="images/S13_PollingApp.jpg" alt="Poll App">
+          </div>
+          <div class="project-content">
+            <h4>Polling App</h4>
+            <p>Simple Polling App to vote on things like lunch, places to go, colours etc. Uses Firebase Realtime
+              Database.</p>
+            <div id="link_0013">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 12 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0012" src="images/S12_Kudos.jpg" alt="Kudos Generator">
+          </div>
+          <div class="project-content">
+            <h4>Kudos Generator</h4>
+            <p>Get a random generator from a person, and add your own too! Uses Firebase Realtime
+              Database.</p>
+            <div id="link_0012">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 11 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0011" src="images/S11_Particles.jpg" alt="Particles">
+          </div>
+          <div class="project-content">
+            <h4>Particles Effect & Changing Background</h4>
+            <p>For my own personal use and enjoyment! Pretty cool huh?</p>
+            <div id="link_0011">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 10 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0010" src="images/S10_Fishing.jpg" alt="Fishing Game">
+          </div>
+          <div class="project-content">
+            <h4>Catch the Fishes!</h4>
+            <p>My 3rd game attempt! Made this for kids from a special request! Its actually a pretty fun
+              game! Catch
+              the fishes and starfishes! One of my favourites</p>
+            <div id="link_0010">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 09 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0009" src="images/S9_Crypto.jpg" alt="Cryptocurrency Calculator">
+          </div>
+          <div class="project-content">
+            <h4>Cryptocurrency Calculator</h4>
+            <p>For calculating profit, ROI and other nifty details. Initially, coded using Python and
+              compiled using
+              pyInstaller pre-ChatGPT era. This version was improved and converted to HTML, CSS and
+              Javascript using
+              Chatgpt.</p>
+            <div id="link_0009">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 08 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0008" src="images/S8_Gala.jpg" alt="Gale Invite (Database)">
+          </div>
+          <div class="project-content">
+            <h4>Gala Invite</h4>
+            <p>An invitation to the gala with effects. Incorporating Firebase Realtime Database!</p>
+            <div id="link_0008">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 07 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0007" src="images/S7_MemoryMatch.jpg" alt="MemoryMatch">
+          </div>
+          <div class="project-content">
+            <h4>Memory Match</h4>
+            <p>My 4th attempt at a game. Got the idea while looking at Netlify's version!</p>
+            <div id="link_0007">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 06 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0006" src="images/S6_FaceBomp.jpg" alt="FaceBomp">
+          </div>
+          <div class="project-content">
+            <h4>FaceBomp Game</h4>
+            <p>My 2nd attempt at making a more advance game via Chatgpt!!</p>
+            <div id="link_0006">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 05 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0005" src="images/S5_RPS.jpg" alt="Rock, Paper & Scissors">
+          </div>
+          <div class="project-content">
+            <h4>Rock, Paper & Scissors</h4>
+            <p>My 1st initial attempt to make a very simple game.</p>
+            <div id="link_0005">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 04 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0004" src="images/S4_Pizza.jpg" alt="Pizza Raffle">
+          </div>
+          <div class="project-content">
+            <h4>Pizza Raffle</h4>
+            <p>Input names and a person is randomly chosen to get the lucky draw for pizza!</p>
+            <div id="link_0004">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 03 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0003" src="images/S3_Sub.jpg" alt="Subscription">
+          </div>
+          <div class="project-content">
+            <h4>Subscription</h4>
+            <p>Simple subscription page for BarkerBox!</p>
+            <div id="link_0003">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 02 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0002" src="images/S2_DrumKit.jpg" alt="Groovy Soundkit">
+          </div>
+          <div class="project-content">
+            <h4>Groovy Soundkit</h4>
+            <p>To demostrate sound effects by clicking on the buttons.</p>
+            <div id="link_0002">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 01 -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0001" src="images/S1_Hover.jpg" alt="HoverChair">
+          </div>
+          <div class="project-content">
+            <h4>HoverChair</h4>
+            <p>A site hero project for HoverChair, a hovercraft-inspired desk chair. A simple and basic
+              landing
+              page. One of the earliest projects I did using ChatGPT. This was the starting point for
+              all my newer
+              projects!</p>
+            <div id="link_0001">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 00 - Example -->
+        <div class="project-card">
+          <div class="project-image">
+            <img id="image_0000" src="images/S0_Empty.jpg" alt="Test Slide">
+          </div>
+          <div class="project-content">
+            <h4>Empty Slide Test</h4>
+            <p>Testing template!</p>
+            <div id="link_0000">
+              <a href="#" class="project-link" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- projects-grid -->
+
+    </div>
+    <!-- "container" -->
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+
+      <div id="about-square">
+        <h3 class="other-sections"><u>About Me</u></h3>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="images/profile-pic-zack.jpg" alt="Zack Ng">
+          </div>
+          <div class="about-text">
+
+            <p>Hello! I'm Zack Ng, a passionate individual dedicated to pursuing excellence in backend engineering and
+              web development. With a love of simplicity and a feel for problem-solving, I enjoy programming and
+              making smooth experiences for all. Mostly, I code because its really a life-changing superpower and it
+              has truly changed my life!</p>
+
+            <h4>Learn about my programming journey</h4>
+            <p>
+            <div class="link_story1" id="link_story1">• Here's <a href="#" target="_blank">Part 1</a> on my blog!</div>
+            <div class="link_story2" id="link_story2">• Here's <a href="#" target="_blank">Part 2</a> on my blog!</div>
+            </p>
+
+            <h4>Info about my professional background and skills</h4>
+            <p>
+            <div class="link_linkedin" id="link_linkedin">• Visit my <a href="#" target="_blank">LinkedIn Profile</a>
+              here!</div>
+            <div class="link_resume" id="link_resume">• Find my <a href="#" target="_blank">resume</a> here!</div>
+            <div class="link_github" id="link_github">• View my <a href="#" target="_blank">Github</a> here!</div>
+            </p>
+
+            <h4>Misc things about me</h4>
+            <p>
+            <div class="link_wordpress" id="link_wordpress">• Visit my <a href="#" target="_blank">Wordpress Blog</a>
+              here!</div>
+            <div class="link_goodreads" id="link_goodreads">• My <a href="#" target="_blank">GoodReads</a> reading list
+              here!</div>
+            <div class="link_tree" id="link_tree">• Find my <a href="#" target="_blank">Linktree</a> here!</div>
+            <div class="link_oldportfolio" id="link_oldportfolio">• Check out my <a href="#" target="_blank">Old Coding
+                Portfolio</a> here! </div>
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div id="skills-background">
+        <div id="skills-square">
+          <h3 class="other-sections"><u>Programming Skills</u></h3>
+          <div class="skill">
+            <h4>HTML</h4>
+            <p>• Proficient in writing semantic and accessible HTML code for building web pages.</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;">90%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>CSS</h4>
+            <p>• Experienced in styling web pages with CSS and creating responsive layouts.</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%;">70%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>JavaScript</h4>
+            <p>• Familiar with JavaScript and building interactive features for websites.</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%;">70%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Python</h4>
+            <p>• My first programming language. Loved it for its simplicty!</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%;">70%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>Ruby</h4>
+            <p>• Used Ruby on Rails for my first programming job! Lovable and easy to code!</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%;">60%</div>
+            </div>
+          </div>
+          <div class="skill">
+            <h4>AI Tools Prompting</h4>
+            <p>• Experienced in writing prompts. This has superspeeded my programming journey. AI tools used included
+              Gemini, Chatgpt, Claude and Grok etc.</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%;">70%</div>
+            </div>
+          </div>
+          <p>-----</p>
+          <p>... and many other languages and softwares that I've experimented over the years!</p>
+          <p>(Eg: Lua, Golang, R, Mojo etc.)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div id="contact-background">
+
+        <div id="contact-square">
+          <div id="contact-text">
+            <h3 class="other-sections"><u>Contact Me 💬</u></h3>
+            <p>If you'd like to know more, feel free to reach out via my email, linkedin or other social media links
+              <b><a href="#bottom">below!</a></b> 😃
+              I'm always glad for good conversations or a friendly chat about programming or anything interesting like
+              philsophy, life, world events and new ideas etc. to grow and become a better individual!
+            </p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="contact-square">
+          <div id="contact-text">
+            <h3 class="other-sections"><u>My Portfolio Website Design 💡</u></h3>
+            <p>I started off with emulating a pre-built template from somewhere that I can't recall. Then
+              decided that a simple minimalistic yet functional style would be suitable at least for the latest version
+              as of 28 April 2025.
+            </p>
+
+            <p>
+              For storing my project gifs, I used Imgur. Meanwhile, I used Firebase Realtime Database to store url and
+              media links for
+              ease of change to update them rather than having to redeploy new changes everytime. For
+              the projects, I initially used a
+              slideshow system to showcase them, which later evolved into a modern grid system, as it is more visually
+              appealing. Additionally, I considered my website design for mobile users, and adjusted the dimensions
+              for relevant mobile devices. Finally, I used Claude to help modernize my website design theme with some
+              relevant CSS changes.
+            </p>
+
+            <p>
+              Finally, I used Claude to help modernize my website design theme with some
+              relevant CSS changes. This led to the current design you see here today. I'll consider updating it when I
+              feel its time or if a redesign is needed.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+    </div> <!-- container -->
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/zackngzixiang/" target="_blank"><i class="fab fa-linkedin"
+          aria-hidden="true"></i></a>
+      <a href="https://github.com/zixiangcodes" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>
+      <a href="https://theawakeninganimus.wordpress.com" target="_blank"><i class="fab fa-wordpress"
+          aria-hidden="true"></i></a>
+      <a href="https://www.goodreads.com/user/show/29440794-zi-xiang-zack" target="_blank"><i class="fa fa-book"
+          aria-hidden="true"></i></a>
+      <a href="https://linktr.ee/zixiang1993" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>
+    </div>
+
+    <p class="copyright"> [ &copy; 2020-2025, Zack Ng. All rights reserved. | Email 📩 : zackcodes.dev@protonmail.com ]
+    </p>
+    <p class="copyright">[ Font Awesome | Netlify | Firebase Realtime Database | Imgur | Claude | Last Updated: 7 July
+      2025, V14.1 ]</p>
+    <br>
+    <div id="bottom"></div>
+  </footer>
+
+</body>
+
+</html>
