@@ -1,17 +1,26 @@
 // loading_url_firebase.js - Updated for modern portfolio
+// Firebase config is loaded from environment variables (see .env.example and Netlify env vars).
+// Never commit real credentials to the repo.
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-// Your web app's Firebase configuration (Coding Portfolio Database)
 const firebaseConfig = {
-  apiKey: "AIzaSyBKTmGfdAAEz8EIDEXfChEVXBw0W09Qe0s",
-  authDomain: "coding-portfolio-database.firebaseapp.com",
-  databaseURL: "https://coding-portfolio-database-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "coding-portfolio-database",
-  storageBucket: "coding-portfolio-database.appspot.com",
-  messagingSenderId: "1047024638974",
-  appId: "1:1047024638974:web:5dc02041fa0a387f08feaf"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
+
+const hasValidConfig = Object.values(firebaseConfig).every(Boolean);
+if (!hasValidConfig) {
+  console.error(
+    "[Firebase] Missing config. Set VITE_FIREBASE_* env vars (see .env.example) or in Netlify Environment variables."
+  );
+  throw new Error("Firebase configuration is incomplete. Check environment variables.");
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
