@@ -212,7 +212,7 @@ function fetchProjectDetails() {
   // For now, we'll use hardcoded data based on your current HTML
   const projectDetails = {
     "0017": {
-      title: "Cool Omni Website",
+      title: "Cool Website",
       description: "Vibe coded website. For testing purposes. Still pretty awesome to see the future!"
     },
     "0016": {
