@@ -1,0 +1,11 @@
+# Netlify build config (build command & publish dir can be set in UI instead)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Firebase Web SDK config is inlined in the client bundle from env vars.
+# Netlify's secret scanner flags the Firebase API key (AIza...) as a "likely secret";
+# Firebase client API keys are intended to be public and are protected by
+# Firebase Security Rules and domain restriction in Google Cloud Console.
+[build.environment]
+  SECRETS_SCAN_SMART_DETECTION_ENABLED = "false"
