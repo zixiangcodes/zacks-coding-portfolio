@@ -41,6 +41,13 @@ const otherLinkIds = [
   "tree", "goodreads", "story1", "story2", "oldportfolio"
 ];
 
+// 1c. Project IDs to show as "Under Maintenance" (grayed out image + badge)
+const underMaintenanceIds = [
+  "0000",
+  "0014",
+  "0015",
+];
+
 // Helper function to safely get element and update properties
 function updateElement(id, updateFunction) {
   const element = document.getElementById(id);
@@ -150,6 +157,7 @@ function generateProjectCards() {
   // If cards already exist in HTML, just update them instead of replacing
   if (existingCards.length > 0) {
     fetchProjectDetails();
+    applyUnderMaintenance();
     return;
   }
 
@@ -177,6 +185,24 @@ function generateProjectCards() {
 
   // Once cards are generated, fetch titles and descriptions
   fetchProjectDetails();
+  applyUnderMaintenance();
+}
+
+// Mark cards as "Under Maintenance" (grayed out image + badge)
+function applyUnderMaintenance() {
+  underMaintenanceIds.forEach(id => {
+    const img = document.getElementById(`image_${id}`);
+    const card = img?.closest('.project-card');
+    if (!card) return;
+    card.classList.add('under-maintenance');
+    const imageWrap = card.querySelector('.project-image');
+    if (imageWrap && !imageWrap.querySelector('.under-maintenance-badge')) {
+      const badge = document.createElement('span');
+      badge.className = 'under-maintenance-badge';
+      badge.textContent = 'Under Maintenance';
+      imageWrap.appendChild(badge);
+    }
+  });
 }
 
 // 3. Fetch project titles and descriptions

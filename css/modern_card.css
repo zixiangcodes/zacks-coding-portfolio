@@ -30,6 +30,32 @@
 .project-image {
     height: 200px;
     overflow: hidden;
+    position: relative;
+}
+
+/* Under Maintenance: grayed-out image + badge */
+.project-card.under-maintenance .project-image img {
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
+.project-card.under-maintenance .project-image {
+    position: relative;
+}
+
+.under-maintenance-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
 .project-image img {
