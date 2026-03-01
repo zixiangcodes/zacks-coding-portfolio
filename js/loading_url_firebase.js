@@ -30,7 +30,7 @@ if (hasValidConfig) {
 
 // 1a. Project IDs to load
 const projectIds = [
-  "0016", "0015", "0014", "0013", "0012", "0011", "0010",
+  "0017", "0016", "0015", "0014", "0013", "0012", "0011", "0010",
   "0009", "0008", "0007", "0006", "0005",
   "0004", "0003", "0002", "0001", "0000"
 ];
@@ -88,6 +88,7 @@ function updateImage(imageId, src) {
 // 2. Helper function to get project name from id (placeholder)
 function getProjectName(id) {
   const projectNames = {
+    "0017": "CoolOmniWebsite",
     "0016": "ThinkBoard",
     "0015": "FacialRecognition",
     "0014": "RailsWebsite",
@@ -210,6 +211,10 @@ function fetchProjectDetails() {
   // This function would typically fetch project details from Firebase
   // For now, we'll use hardcoded data based on your current HTML
   const projectDetails = {
+    "0017": {
+      title: "Cool Omni Website",
+      description: "Vibe coded website. For testing purposes. Still pretty awesome to see the future!"
+    },
     "0016": {
       title: "Mern ThinkBoard",
       description: "My personal notepad app that uses the MERN stack! Uses Render for hosting, Tailwind + DaisyUI for CSS, Redis via Upstash and is mobile friendly! I chose a synthwave theme to give it a distinctive feel and vibe!"
