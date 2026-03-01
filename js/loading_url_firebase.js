@@ -15,20 +15,18 @@ const firebaseConfig = {
 };
 
 const hasValidConfig = Object.values(firebaseConfig).every(Boolean);
-if (!hasValidConfig) {
-  console.error(
-    "[Firebase] Missing config. Set VITE_FIREBASE_* env vars (see .env.example) or in Netlify Environment variables."
+let app, database, mediaRef, urlRef;
+
+if (hasValidConfig) {
+  app = initializeApp(firebaseConfig);
+  database = getDatabase(app);
+  mediaRef = ref(database, "media");
+  urlRef = ref(database, "url");
+} else {
+  console.warn(
+    "[Firebase] Missing config. Project list will still show; links/images won't update from Firebase. Set VITE_FIREBASE_* env vars in Netlify (Site settings → Environment variables) and redeploy."
   );
-  throw new Error("Firebase configuration is incomplete. Check environment variables.");
 }
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-
-// Database References
-const mediaRef = ref(database, "media");
-const urlRef = ref(database, "url");
 
 // 1a. Project IDs to load
 const projectIds = [
@@ -105,40 +103,36 @@ function getProjectName(id) {
   return projectNames[id] || "Project";
 }
 
-// Listen for changes in the "media" node and update the image sources
-onValue(mediaRef, (snapshot) => {
-  const mediaData = snapshot.val();
-
-  if (!mediaData) return;
-
-  // Update each project image
-  projectIds.forEach(id => {
-    if (mediaData[`image_${id}`]) {
-      updateImage(id, mediaData[`image_${id}`]);
-    }
+// Listen for changes in the "media" node and update the image sources (only if Firebase is configured)
+if (mediaRef) {
+  onValue(mediaRef, (snapshot) => {
+    const mediaData = snapshot.val();
+    if (!mediaData) return;
+    projectIds.forEach(id => {
+      if (mediaData[`image_${id}`]) {
+        updateImage(id, mediaData[`image_${id}`]);
+      }
+    });
   });
-});
+}
 
-// Listen for changes in the "url" node and update the links
-onValue(urlRef, (snapshot) => {
-  const urlData = snapshot.val();
-
-  if (!urlData) return;
-
-  // Update project links
-  projectIds.forEach(id => {
-    if (urlData[`link_${id}`]) {
-      updateLink(id, urlData[`link_${id}`]);
-    }
+// Listen for changes in the "url" node and update the links (only if Firebase is configured)
+if (urlRef) {
+  onValue(urlRef, (snapshot) => {
+    const urlData = snapshot.val();
+    if (!urlData) return;
+    projectIds.forEach(id => {
+      if (urlData[`link_${id}`]) {
+        updateLink(id, urlData[`link_${id}`]);
+      }
+    });
+    otherLinkIds.forEach(id => {
+      if (urlData[`link_${id}`]) {
+        updateLink(id, urlData[`link_${id}`]);
+      }
+    });
   });
-
-  // Update other links
-  otherLinkIds.forEach(id => {
-    if (urlData[`link_${id}`]) {
-      updateLink(id, urlData[`link_${id}`]);
-    }
-  });
-});
+}
 
 // Generate project cards dynamically based on the data
 function generateProjectCards() {
