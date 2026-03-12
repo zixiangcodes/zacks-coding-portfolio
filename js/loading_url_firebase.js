@@ -38,7 +38,7 @@ const projectIds = [
 // 1b. Other link IDs to update
 const otherLinkIds = [
   "resume", "linkedin", "wordpress", "github",
-  "tree", "goodreads", "story1", "story2", "oldportfolio"
+  "tree", "goodreads", "story1", "story2", "oldportfolio, linkportfoliodesign"
 ];
 
 // 1c. Project IDs to show as "Under Maintenance" (grayed out image + badge)
