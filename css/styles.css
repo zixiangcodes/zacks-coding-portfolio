@@ -232,11 +232,18 @@ section h3 u {
 section h3 u::after {
     content: '';
     position: absolute;
-    width: 50%;
+    width: 100%;
     height: 3px;
-    bottom: -10px;
-    left: 25%;
+    bottom: -5px;
+    left: 0;
     background-color: var(--accent);
+    transform: scaleX(0.7);
+    transform-origin: bottom left;
+    transition: transform var(--transition-normal);
+}
+
+section h3:hover u::after {
+    transform: scaleX(1);
 }
 
 /* Projects Section - Card Layout */
