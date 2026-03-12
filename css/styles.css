@@ -216,6 +216,11 @@ nav li a {
     color: var(--primary-light);
 }
 
+/* Ensure Projects title (with .project-intro) also changes color on hover */
+.project-section:hover .project-intro {
+    color: var(--primary-light);
+}
+
 section h3 u {
     text-decoration: none;
 }
