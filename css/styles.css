@@ -229,20 +229,30 @@ section h3 u {
     text-decoration: none;
 }
 
+/* Original static underline for all section h3 */
 section h3 u::after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 3px;
+    bottom: -10px;
+    left: 25%;
+    background-color: var(--accent);
+}
+
+/* Animated underline for main body section titles only */
+.project-section u::after,
+.other-sections u::after {
+    width: 100%;
     bottom: -5px;
     left: 0;
-    background-color: var(--accent);
     transform: scaleX(0.7);
     transform-origin: bottom left;
     transition: transform var(--transition-normal);
 }
 
-section h3:hover u::after {
+.project-section:hover u::after,
+.other-sections:hover u::after {
     transform: scaleX(1);
 }
 
