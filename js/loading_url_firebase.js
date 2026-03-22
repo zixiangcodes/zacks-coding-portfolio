@@ -1,6 +1,7 @@
 // loading_url_firebase.js - Updated for modern portfolio
 // Firebase config is loaded from environment variables (see .env.example and Netlify env vars).
 // Never commit real credentials to the repo.
+// https://giphy.com/channel/zixiang1993
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
@@ -30,7 +31,7 @@ if (hasValidConfig) {
 
 // 1a. Project IDs to load
 const projectIds = [
-  "0017", "0016", "0015", "0014", "0013", "0012", "0011", "0010",
+  "0018", "0017", "0016", "0015", "0014", "0013", "0012", "0011", "0010",
   "0009", "0008", "0007", "0006", "0005",
   "0004", "0003", "0002", "0001", "0000"
 ];
@@ -88,6 +89,7 @@ function updateImage(imageId, src) {
 // 2. Helper function to get project name from id (placeholder)
 function getProjectName(id) {
   const projectNames = {
+    "0018": "DadJokesGenerator",
     "0017": "CoolOmniWebsite",
     "0016": "ThinkBoard",
     "0015": "FacialRecognition",
@@ -211,6 +213,10 @@ function fetchProjectDetails() {
   // This function would typically fetch project details from Firebase
   // For now, we'll use hardcoded data based on your current HTML
   const projectDetails = {
+    "0018": {
+      title: "Dad Jokes Generator",
+      description: "Simple one page website, with its backend coded in golang and calling an external public API to generate dad jokes! Hosted on Render. I had to do it 😂"
+    },
     "0017": {
       title: "Cool Website",
       description: "Vibe coded website. For testing purposes. Still pretty awesome to see the future!"
