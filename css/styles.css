@@ -452,6 +452,11 @@ section h3 u::after {
     gap: 6px;
 }
 
+.skill-chip i {
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
 .skill-icon {
     font-size: 1.75rem;
     line-height: 1;
@@ -605,6 +610,10 @@ section h3 u::after {
     }
 
     .skill-icon {
+        font-size: 1.55rem;
+    }
+
+    .skill-chip i {
         font-size: 1.55rem;
     }
 
