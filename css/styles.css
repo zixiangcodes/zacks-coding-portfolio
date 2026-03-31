@@ -413,10 +413,25 @@ section h3 u::after {
     display: inline-flex;
     gap: 10px;
     width: max-content;
+    animation: skillScroll 28s linear infinite;
+    will-change: transform;
 }
 
 .skills-track.reverse {
-    /* Reverse direction handled by JavaScript auto-scroll */
+    animation-direction: reverse;
+}
+
+.skills-marquee.is-dragging .skills-track {
+    animation-play-state: paused;
+}
+
+@keyframes skillScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 .skill-chip {
@@ -457,6 +472,10 @@ section h3 u::after {
 @media (prefers-reduced-motion: reduce) {
     .skills-marquee {
         scroll-behavior: auto;
+    }
+
+    .skills-track {
+        animation-duration: 70s;
     }
 }
 

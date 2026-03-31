@@ -182,18 +182,24 @@ function initializeSkillsMarqueeControls() {
         let startX = 0;
         let startScrollLeft = 0;
         const direction = track.classList.contains('reverse') ? -1 : 1;
-        const speed = 0.45;
+        // px per animation frame
+        // Keep reduced-motion still visibly moving (users should not see "stuck" behavior).
+        // Use an integer-ish step so movement is visibly applied every frame.
+        const speed = reduceMotion ? 1.1 : 2.1;
 
-        const halfTrackWidth = () => track.scrollWidth / 2;
-        const normalizeLoopPosition = () => {
-            const half = halfTrackWidth();
-            if (!half) return;
+        const getMaxScroll = () => Math.max(0, marquee.scrollWidth - marquee.clientWidth);
 
-            // The list is duplicated. Keep scroll in the first half so it loops seamlessly.
-            if (marquee.scrollLeft >= half) {
-                marquee.scrollLeft -= half;
-            } else if (marquee.scrollLeft <= 0) {
-                marquee.scrollLeft += half;
+        const recenterIfNearEdge = () => {
+            const maxScroll = getMaxScroll();
+            if (!maxScroll) return;
+
+            const midpoint = maxScroll / 2;
+            // Only recenter when we're *very* close to either edge.
+            // This keeps the motion continuous without abrupt jumps.
+            if (marquee.scrollLeft <= 2) {
+                marquee.scrollLeft = midpoint + 2;
+            } else if (marquee.scrollLeft >= maxScroll - 2) {
+                marquee.scrollLeft = midpoint - 2;
             }
         };
 
@@ -208,7 +214,7 @@ function initializeSkillsMarqueeControls() {
             if (!isDragging) return;
             const delta = clientX - startX;
             marquee.scrollLeft = startScrollLeft - delta;
-            normalizeLoopPosition();
+            recenterIfNearEdge();
         };
 
         const stopInteraction = () => {
@@ -248,25 +254,7 @@ function initializeSkillsMarqueeControls() {
             stopInteraction();
         });
 
-        // Start away from the hard edge so reverse rows feel smooth immediately.
-        requestAnimationFrame(() => {
-            const half = halfTrackWidth();
-            if (half > 0) {
-                marquee.scrollLeft = direction < 0 ? half : 1;
-            }
-        });
-
-        if (!reduceMotion) {
-            const autoScroll = () => {
-                if (!isDragging) {
-                    marquee.scrollLeft += speed * direction;
-                    normalizeLoopPosition();
-                }
-                window.requestAnimationFrame(autoScroll);
-            };
-
-            window.requestAnimationFrame(autoScroll);
-        }
+        // No JS auto-scroll: the marquee moves via CSS animation (`skillScroll`).
     });
 }
 
