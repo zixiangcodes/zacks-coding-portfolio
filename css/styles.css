@@ -26,6 +26,13 @@ body {
     line-height: 1.6;
 }
 
+/* Prevent horizontal page stretch from animated components */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 h1,
 h2,
 h4,
@@ -352,49 +359,153 @@ section h3 u::after {
 
 /* Skills Section */
 #skills-square {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     background-color: var(--white);
     padding: var(--space-lg);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
+    overflow-x: hidden;
 }
 
-.skill {
-    margin-bottom: var(--space-lg);
-}
-
-.skill h4 {
+.skills-intro {
     text-align: left;
-    margin-bottom: var(--space-xs);
-    font-size: 1.1rem;
+    margin-bottom: var(--space-md);
 }
 
-.skill p {
+.skills-marquee-group {
+    margin-bottom: var(--space-md);
+}
+
+.skills-category-title {
     text-align: left;
-    font-size: 0.95rem;
     margin-bottom: var(--space-sm);
+    padding-bottom: 4px;
+    font-size: 1.05rem;
 }
 
-.progress-bar {
-    background-color: var(--gray-200);
-    height: 26px;
-    border-radius: var(--radius-full);
-    overflow: hidden;
-}
-
-.progress {
-    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
-    height: 100%;
-    border-radius: var(--radius-full);
+.skills-marquee {
     position: relative;
-    transition: width 1s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    padding: 6px 0;
 }
 
-.progress-value {
-    position: absolute;
-    right: 10px;
-    color: var(--white);
-    font-size: 0.8rem;
-    line-height: 12px;
+.skills-track {
+    display: inline-flex;
+    gap: 10px;
+    width: max-content;
+    animation: skillScroll 28s linear infinite;
+}
+
+.skills-track.reverse {
+    animation-direction: reverse;
+}
+
+.skill-chip {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 118px;
+    min-height: 96px;
+    padding: 12px 8px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+    background: linear-gradient(90deg, rgba(229, 231, 235, 0.2) 0%, rgba(147, 197, 253, 0.22) 100%);
+    white-space: normal;
+    color: var(--text-dark);
+    text-align: center;
+    gap: 6px;
+}
+
+.skill-icon {
+    font-size: 1.75rem;
+    line-height: 1;
+    color: #1f2937;
+}
+
+.skill-icon-image {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.skill-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+@keyframes skillScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-track,
+    .skills-track.reverse {
+        animation: none;
+    }
+}
+
+/* Brand-like logo colors */
+.skill-icon.fa-js-square { color: #f7df1e; }
+.skill-icon.devicon-html5-plain { color: #e34f26; }
+.skill-icon.devicon-css3-plain { color: #1572b6; }
+.skill-icon.fa-react { color: #61dafb; }
+.skill-icon.fa-node-js { color: #3c873a; }
+.skill-icon.fa-github { color: #171515; }
+.skill-icon.fa-gitlab { color: #fc6d26; }
+.skill-icon.fa-list-check { color: #7c3aed; }
+.skill-icon.fa-brain { color: #7c3aed; }
+.skill-icon.fa-robot { color: #10a37f; }
+.skill-icon.fa-code { color: #2563eb; }
+.skill-icon.fa-bolt { color: #f59e0b; }
+.skill-icon.fa-wand-magic-sparkles { color: #db2777; }
+.skill-icon.fa-star { color: #eab308; }
+.skill-icon.fa-cloud { color: #0ea5e9; }
+
+.skill-icon.devicon-python-plain { color: #3776ab; }
+.skill-icon.devicon-go-original-wordmark { color: #00add8; }
+.skill-icon.devicon-typescript-plain { color: #3178c6; }
+.skill-icon.devicon-csharp-plain { color: #68217a; }
+.skill-icon.devicon-rails-plain { color: #cc0000; }
+.skill-icon.devicon-git-plain { color: #f05032; }
+.skill-icon.devicon-bitbucket-original { color: #2684ff; }
+.skill-icon.devicon-docker-plain { color: #2496ed; }
+.skill-icon.devicon-postman-plain { color: #ff6c37; }
+.skill-icon.devicon-mongodb-plain { color: #47a248; }
+.skill-icon.devicon-firebase-plain { color: #ffca28; }
+.skill-icon.devicon-postgresql-plain { color: #336791; }
+.skill-icon.devicon-redis-plain { color: #dc382d; }
+.skill-icon.devicon-netlify-plain { color: #00c7b7; }
+
+@media (max-width: 767px) {
+    .skill-chip {
+        width: 104px;
+        min-height: 88px;
+        padding: 8px 6px;
+    }
+
+    .skill-icon {
+        font-size: 1.55rem;
+    }
+
+    .skill-icon-image {
+        width: 27px;
+        height: 27px;
+    }
+
+    .skill-label {
+        font-size: 0.76rem;
+    }
 }
 
 /* Contact Section */
