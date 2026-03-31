@@ -172,25 +172,28 @@ function initializeMobileNavigation() {
 function initializeSkillsMarqueeControls() {
     const marquees = document.querySelectorAll('.skills-marquee');
     if (!marquees.length) return;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     marquees.forEach((marquee) => {
+        const track = marquee.querySelector('.skills-track');
+        if (!track) return;
+
         let isDragging = false;
         let startX = 0;
         let startScrollLeft = 0;
+        const direction = track.classList.contains('reverse') ? -1 : 1;
+        const speed = 0.45;
 
-        const getMaxScroll = () => Math.max(0, marquee.scrollWidth - marquee.clientWidth);
+        const halfTrackWidth = () => track.scrollWidth / 2;
+        const normalizeLoopPosition = () => {
+            const half = halfTrackWidth();
+            if (!half) return;
 
-        const recenterLoop = () => {
-            const maxScroll = getMaxScroll();
-            if (!maxScroll) return;
-
-            // The track content is duplicated, so keeping scroll around the middle
-            // allows continuous dragging without hitting visible hard ends.
-            const midpoint = maxScroll / 2;
-            if (marquee.scrollLeft <= 2) {
-                marquee.scrollLeft = midpoint - 2;
-            } else if (marquee.scrollLeft >= maxScroll - 2) {
-                marquee.scrollLeft = midpoint + 2;
+            // The list is duplicated. Keep scroll in the first half so it loops seamlessly.
+            if (marquee.scrollLeft >= half) {
+                marquee.scrollLeft -= half;
+            } else if (marquee.scrollLeft <= 0) {
+                marquee.scrollLeft += half;
             }
         };
 
@@ -198,20 +201,20 @@ function initializeSkillsMarqueeControls() {
             isDragging = true;
             startX = clientX;
             startScrollLeft = marquee.scrollLeft;
-            marquee.classList.add('is-dragging', 'is-paused');
+            marquee.classList.add('is-dragging');
         };
 
         const moveInteraction = (clientX) => {
             if (!isDragging) return;
             const delta = clientX - startX;
             marquee.scrollLeft = startScrollLeft - delta;
-            recenterLoop();
+            normalizeLoopPosition();
         };
 
         const stopInteraction = () => {
             if (!isDragging) return;
             isDragging = false;
-            marquee.classList.remove('is-dragging', 'is-paused');
+            marquee.classList.remove('is-dragging');
         };
 
         marquee.addEventListener('mousedown', (event) => {
@@ -245,17 +248,25 @@ function initializeSkillsMarqueeControls() {
             stopInteraction();
         });
 
-        marquee.addEventListener('scroll', () => {
-            recenterLoop();
-        }, { passive: true });
-
-        // Start from the midpoint to let users drag both directions immediately.
+        // Start away from the hard edge so reverse rows feel smooth immediately.
         requestAnimationFrame(() => {
-            const maxScroll = getMaxScroll();
-            if (maxScroll > 0) {
-                marquee.scrollLeft = maxScroll / 2;
+            const half = halfTrackWidth();
+            if (half > 0) {
+                marquee.scrollLeft = direction < 0 ? half : 1;
             }
         });
+
+        if (!reduceMotion) {
+            const autoScroll = () => {
+                if (!isDragging) {
+                    marquee.scrollLeft += speed * direction;
+                    normalizeLoopPosition();
+                }
+                window.requestAnimationFrame(autoScroll);
+            };
+
+            window.requestAnimationFrame(autoScroll);
+        }
     });
 }
 
