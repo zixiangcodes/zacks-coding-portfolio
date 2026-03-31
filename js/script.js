@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize mobile navigation
     initializeMobileNavigation();
+
+    // Allow manual control for skills sliders
+    initializeSkillsMarqueeControls();
 });
 
 // Function to initialize project filtering
@@ -160,6 +163,97 @@ function initializeMobileNavigation() {
                     top: target.offsetTop - 70,
                     behavior: 'smooth'
                 });
+            }
+        });
+    });
+}
+
+// Function to allow manual drag/scroll for skills marquee rows
+function initializeSkillsMarqueeControls() {
+    const marquees = document.querySelectorAll('.skills-marquee');
+    if (!marquees.length) return;
+
+    marquees.forEach((marquee) => {
+        let isDragging = false;
+        let startX = 0;
+        let startScrollLeft = 0;
+
+        const getMaxScroll = () => Math.max(0, marquee.scrollWidth - marquee.clientWidth);
+
+        const recenterLoop = () => {
+            const maxScroll = getMaxScroll();
+            if (!maxScroll) return;
+
+            // The track content is duplicated, so keeping scroll around the middle
+            // allows continuous dragging without hitting visible hard ends.
+            const midpoint = maxScroll / 2;
+            if (marquee.scrollLeft <= 2) {
+                marquee.scrollLeft = midpoint - 2;
+            } else if (marquee.scrollLeft >= maxScroll - 2) {
+                marquee.scrollLeft = midpoint + 2;
+            }
+        };
+
+        const startInteraction = (clientX) => {
+            isDragging = true;
+            startX = clientX;
+            startScrollLeft = marquee.scrollLeft;
+            marquee.classList.add('is-dragging', 'is-paused');
+        };
+
+        const moveInteraction = (clientX) => {
+            if (!isDragging) return;
+            const delta = clientX - startX;
+            marquee.scrollLeft = startScrollLeft - delta;
+            recenterLoop();
+        };
+
+        const stopInteraction = () => {
+            if (!isDragging) return;
+            isDragging = false;
+            marquee.classList.remove('is-dragging', 'is-paused');
+        };
+
+        marquee.addEventListener('mousedown', (event) => {
+            event.preventDefault();
+            startInteraction(event.clientX);
+        });
+
+        window.addEventListener('mousemove', (event) => {
+            moveInteraction(event.clientX);
+        });
+
+        window.addEventListener('mouseup', () => {
+            stopInteraction();
+        });
+
+        marquee.addEventListener('touchstart', (event) => {
+            if (!event.touches.length) return;
+            startInteraction(event.touches[0].clientX);
+        }, { passive: true });
+
+        marquee.addEventListener('touchmove', (event) => {
+            if (!event.touches.length) return;
+            moveInteraction(event.touches[0].clientX);
+        }, { passive: true });
+
+        marquee.addEventListener('touchend', () => {
+            stopInteraction();
+        });
+
+        marquee.addEventListener('touchcancel', () => {
+            stopInteraction();
+        });
+
+        marquee.addEventListener('scroll', () => {
+            recenterLoop();
+        }, { passive: true });
+
+        // Start from the midpoint to let users drag both directions immediately.
+        requestAnimationFrame(() => {
+            const maxScroll = getMaxScroll();
+            if (maxScroll > 0) {
+                marquee.scrollLeft = maxScroll / 2;
             }
         });
     });

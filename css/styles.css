@@ -388,9 +388,21 @@ section h3 u::after {
 
 .skills-marquee {
     position: relative;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     width: 100%;
     padding: 6px 0;
+    cursor: grab;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.skills-marquee::-webkit-scrollbar {
+    display: none;
+}
+
+.skills-marquee.is-dragging {
+    cursor: grabbing;
 }
 
 .skills-track {
@@ -402,6 +414,10 @@ section h3 u::after {
 
 .skills-track.reverse {
     animation-direction: reverse;
+}
+
+.skills-marquee.is-paused .skills-track {
+    animation-play-state: paused;
 }
 
 .skill-chip {
