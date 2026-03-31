@@ -24,6 +24,7 @@ body {
     color: var(--text);
     background-color: var(--background);
     line-height: 1.6;
+    padding-top: 110px;
 }
 
 /* Prevent horizontal page stretch from animated components */
@@ -119,8 +120,10 @@ header {
     /* padding: var(--space-lg) 0; */
     padding: 22px;
     box-shadow: var(--shadow-md);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
     text-align: center;
 }
@@ -588,6 +591,10 @@ footer {
 }
 
 @media (max-width: 767px) {
+    body {
+        padding-top: 130px;
+    }
+
     header .container {
         flex-direction: column;
         gap: var(--space-md);
