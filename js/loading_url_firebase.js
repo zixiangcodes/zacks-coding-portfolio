@@ -244,7 +244,7 @@ function fetchProjectDetails() {
     },
     "0012": {
       title: "Kudos Generator",
-      description: "Get a random generator from a person, and add your own too! Uses Firebase Realtime Database."
+      description: "Get a random generator from a person, and add your own too! Uses Firebase Realtime Database, and basic HTML, CSS and JS. Hosted on Netlify."
     },
     "0011": {
       title: "Particles Effect & Changing Background",
