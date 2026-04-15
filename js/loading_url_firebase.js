@@ -31,7 +31,7 @@ if (hasValidConfig) {
 
 // 1a. Project IDs to load
 const projectIds = [
-  "0018", "0017", "0016", "0015", "0014", "0013", "0012", "0011", "0010",
+  "0019", "0018", "0017", "0016", "0015", "0014", "0013", "0012", "0011", "0010",
   "0009", "0008", "0007", "0006", "0005",
   "0004", "0003", "0002", "0001", "0000"
 ];
@@ -89,6 +89,7 @@ function updateImage(imageId, src) {
 // 2. Helper function to get project name from id (placeholder)
 function getProjectName(id) {
   const projectNames = {
+    "0019": "MalaysianJokesApp",
     "0018": "DadJokesGenerator",
     "0017": "CoolOmniWebsite",
     "0016": "ThinkBoard",
@@ -213,6 +214,10 @@ function fetchProjectDetails() {
   // This function would typically fetch project details from Firebase
   // For now, we'll use hardcoded data based on your current HTML
   const projectDetails = {
+    "0019": {
+      title: "Malaysian Jokes App",
+      description: "Malaysian Jokes App for Malaysians! Get random jokes and add your own too! Uses Firebase Realtime Database, and basic HTML, CSS and JS. Hosted on Netlify."
+    },
     "0018": {
       title: "Dad Jokes Generator",
       description: "Simple one page website, with its backend coded in golang and calling an external public API to generate dad jokes! Hosted on Render. I had to do it 😂"
@@ -235,7 +240,7 @@ function fetchProjectDetails() {
     },
     "0013": {
       title: "Polling App",
-      description: "Simple Polling App to vote on things like lunch, places to go, colours etc. Uses Firebase Realtime Database."
+      description: "Simple Polling App to vote on things like lunch, places to go, colours etc. Uses Firebase Realtime Database, and basic HTML, CSS and JS. Hosted on Netlify."
     },
     "0012": {
       title: "Kudos Generator",
