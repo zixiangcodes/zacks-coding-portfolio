@@ -360,6 +360,19 @@ section h3 u::after {
     margin-bottom: var(--space-md);
 }
 
+.self-profile {
+    text-align: justify;
+    text-align-last: left;
+    /* keeps the final line left-aligned */
+}
+
+@media (max-width: 768px) {
+    .self-profile {
+        text-align: justify;
+        text-align-last: left;
+    }
+}
+
 /* Skills Section */
 #skills-square {
     display: block;
