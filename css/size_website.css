@@ -51,10 +51,12 @@
 
     #projects,
     #about,
+    #experience,
     #skills,
     #contact {
         padding: 20px;
     }
+
 
     .copyright {
         font-size: 0.9rem;
@@ -74,6 +76,10 @@
 
     nav li {
         display: block;
+    }
+
+    nav li a {
+        font-size: 1.0rem;
     }
 
     p {
@@ -115,10 +121,12 @@
 
     #projects,
     #about,
+    #experience,
     #skills,
     #contact {
         padding: 20px;
     }
+
 
     .about-image {
         margin-bottom: 0px;
@@ -144,6 +152,10 @@
 
     nav li {
         display: block;
+    }
+
+    nav li a {
+        font-size: 0.95rem;
     }
 
     p {
@@ -189,10 +201,12 @@
 
     #projects,
     #about,
+    #experience,
     #skills,
     #contact {
         padding: 20px;
     }
+
 
     .copyright {
         font-size: 0.9rem;

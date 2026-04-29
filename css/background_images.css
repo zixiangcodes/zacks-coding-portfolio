@@ -20,6 +20,15 @@
     background-position: center;
 }
 
+#experience {
+    background-image: url('../images/background_experience.jpg');
+    /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+}
+
+
+
 #skills {
     background-image: url('../images/background_skills.jpg');
     /* Replace with your background image path */
@@ -42,6 +51,11 @@
 
 #projects-background {
     padding: 35px 0;
+    /* Adjust padding for top and bottom spacing */
+}
+
+#experience-background {
+    padding: 50px 0;
     /* Adjust padding for top and bottom spacing */
 }
 
