@@ -335,6 +335,9 @@ section h3 u::after {
     padding: var(--space-lg);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
+    /* add this */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .about-content {
@@ -396,6 +399,9 @@ section h3 u::after {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     overflow-x: hidden;
+    /* add this */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .skills-intro {
@@ -658,6 +664,9 @@ section h3 u::after {
     padding: var(--space-lg);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
+    /* add this */
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .divider {
