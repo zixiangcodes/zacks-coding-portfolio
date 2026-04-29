@@ -18,11 +18,13 @@
   <link rel="stylesheet" href="css/background_images.css">
   <link rel="stylesheet" href="css/modern_card.css">
   <link rel="stylesheet" href="css/navbar_zoom.css">
+  <link rel="stylesheet" href="css/experience_slider.css">
   <!-- Loads firebase script -->
   <script src="js/loading_url_firebase.js" type="module" defer></script>
   <!-- Load other scripts -->
   <script type="module" src="js/script.js"></script>
   <script type="module" src="js/modern.js"></script>
+  <script type="module" src="js/experience_slider.js"></script>
 
   <!-- Open Graph (for Discord, Facebook, etc.) -->
   <meta property="og:title" content="Zack Ng's Coding Portfolio">
@@ -432,8 +434,76 @@
       <div id="experience-background">
         <div id="experience-square">
           <h3 class="other-sections"><u>Experience</u></h3>
-          <!-- To be removed later -->
-          <h4 id="coming-soon">Coming soon...</h4>
+
+          <div class="experience-slider">
+
+            <!-- Card 1 -->
+            <div class="experience-card">
+              <div class="experience-logo">
+                <img src="images/logo_DF.png" alt="Company 1 Logo">
+              </div>
+              <h4 class="experience-role">Project Coordinator</h4>
+              <p class="experience-company">Data Flows Sdn. Bhd</p>
+              <p class="experience-date">NOV 2025 – FEB 2026</p>
+              <ul class="experience-list">
+                <li>Assist to coordinate 6 concurrent client projects (BIG App, MyHA Platform, Caring App, Ezywell)
+                  under a Senior Technical BA.</li>
+                <li>Managed timelines and sprint planning via ClickUp; translated business requirements into clear
+                  developer tasks.</li>
+                <li>Prepared release notes, performed QA/testing, and coordinated integrated AI automation workflows via
+                  N8N with AI internal team.</li>
+              </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="experience-card">
+              <div class="experience-logo">
+                <img src="images/logo_DF.png" alt="Company 2 Logo">
+              </div>
+              <h4 class="experience-role">Software Developer</h4>
+              <p class="experience-company">Data Flows Sdn. Bhd</p>
+              <p class="experience-date">AUG 2025 – NOV 2025</p>
+              <ul class="experience-list">
+                <li>Built and deployed web features for the MyHA Platform using the .NET framework; resolved bugs and
+                  maintained client site.</li>
+                <li>Authored technical onboarding documentation that enabled 5 new developers to set up the project
+                  locally.</li>
+              </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="experience-card">
+              <div class="experience-logo">
+                <img src="images/logo_fave.png" alt="Company 3 Logo">
+              </div>
+              <h4 class="experience-role">Software Engineer (Backend)</h4>
+              <p class="experience-company">Fave Asia Tech</p>
+              <p class="experience-date">APR 2022 – OCT 2022</p>
+              <ul class="experience-list">
+                <li>Developed Ruby on Rails features for FavePay Later (BNPL) in agile sprints via Jira.</li>
+                <li>Wrote unit tests, participated in CI/CD workflows, and contributed to internal API documentation.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="experience-card">
+              <div class="experience-logo">
+                <img src="images/logo_fave.png" alt="Company 4 Logo">
+              </div>
+              <h4 class="experience-role">Partner Management Exec.</h4>
+              <p class="experience-company">Fave Asia Tech</p>
+              <p class="experience-date">JAN 2019 – DEC 2019</p>
+              <ul class="experience-list">
+                <li>Managed 150 key accounts including Gain City, Best Denki, and Food Republic for the SG National
+                  Sales Team.</li>
+                <li>Led onboarding, deal-closing, and issue resolution by liaising across all internal teams.</li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- experience-slider -->
+
         </div>
       </div>
     </div>
@@ -686,7 +756,7 @@
     <p class="copyright"> [ &copy; 2020-2026, Zack Ng. All rights reserved. | Email 📩 : zackcodes.dev@gmail.com ]
     </p>
     <p class="copyright">[ Font Awesome | Netlify | Firebase Realtime Database | Giphy | Claude | Last Updated: 29 April
-      2026, V15.90 ]</p>
+      2026, V15.99 ]</p>
     <br>
     <div id="bottom"></div>
   </footer>
