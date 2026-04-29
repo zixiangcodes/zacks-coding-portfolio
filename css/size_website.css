@@ -3,7 +3,7 @@
 /* For Tablets */
 @media (max-width: 1025px) {
     header {
-        padding: 10px;
+        padding: 15px;
     }
 
     header h1 {
@@ -16,10 +16,6 @@
 
     nav li a {
         font-size: 1.00rem;
-    }
-
-    .title {
-        padding-bottom: 30px;
     }
 
     p {
@@ -75,7 +71,7 @@
 /* For Smartphones */
 @media (max-width: 768px) {
     header {
-        padding: 10px;
+        padding: 15px;
     }
 
     header h1 {
@@ -88,10 +84,6 @@
 
     nav li a {
         font-size: 0.95rem;
-    }
-
-    .title {
-        padding-bottom: 30px;
     }
 
     p {
@@ -155,7 +147,7 @@
 
     /* Adjust header styles */
     header {
-        padding: 10px;
+        padding: 15px;
     }
 
     header h1 {
@@ -168,10 +160,6 @@
 
     nav li a {
         font-size: 0.85rem;
-    }
-
-    .title {
-        padding-bottom: 30px;
     }
 
     p {

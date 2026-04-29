@@ -118,7 +118,7 @@ header {
     background-color: var(--primary);
     color: var(--white);
     /* padding: var(--space-lg) 0; */
-    padding: 22px;
+    padding: 18px;
     box-shadow: var(--shadow-md);
     position: fixed;
     top: 0;
