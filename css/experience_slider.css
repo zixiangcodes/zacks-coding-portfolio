@@ -109,11 +109,40 @@
     cursor: grabbing;
 }
 
+.swipe-hint {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .experience-card {
-        min-width: 260px;
-        max-width: 260px;
-        padding: 18px 16px;
+        min-width: 240px;
+        max-width: 240px;
+        padding: 16px 14px;
+    }
+
+    .experience-logo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .experience-role {
+        font-size: 0.95rem;
+    }
+
+    .experience-company {
+        font-size: 0.85rem;
+    }
+
+    .experience-date {
+        font-size: 0.75rem;
+    }
+
+    .experience-list li {
+        font-size: 0.80rem;
     }
 }
