@@ -18,6 +18,10 @@
         font-size: 1.00rem;
     }
 
+    .title {
+        padding-bottom: 30px;
+    }
+
     p {
         font-size: 18px;
     }
@@ -84,6 +88,10 @@
 
     nav li a {
         font-size: 0.95rem;
+    }
+
+    .title {
+        padding-bottom: 30px;
     }
 
     p {
@@ -160,6 +168,10 @@
 
     nav li a {
         font-size: 0.85rem;
+    }
+
+    .title {
+        padding-bottom: 30px;
     }
 
     p {
