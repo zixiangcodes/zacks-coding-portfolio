@@ -110,10 +110,6 @@ a:hover {
 
 /* Header & Navigation */
 
-.title {
-    padding-bottom: 20px;
-}
-
 header {
     background-color: var(--primary);
     color: var(--white);
