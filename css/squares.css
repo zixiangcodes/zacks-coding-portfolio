@@ -34,7 +34,9 @@
     min-height: 250px;
     /* add this */
     margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    /* to remove white line on pc */
+    margin-bottom: 60px;
 }
 
 #skills-square {

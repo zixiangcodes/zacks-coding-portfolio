@@ -388,6 +388,15 @@ section h3 u::after {
 }
 
 /* Experience Section */
+/* Ensures that experience background image able to cover below, prevent white line */
+#experience {
+    /* min-height: 100vh; */
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+    padding-bottom: 32px;
+}
+
 #coming-soon {
     margin-top: 24px;
 }
