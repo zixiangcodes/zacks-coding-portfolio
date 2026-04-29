@@ -171,6 +171,8 @@ nav ul {
     justify-content: center;
     flex-wrap: wrap;
     padding: 0;
+
+    margin-left: 15px;
 }
 
 nav li {
