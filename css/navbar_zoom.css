@@ -1,6 +1,10 @@
 /* to adjust when clicking on navbar sections */
-#about,
+#about {
+    padding-top: 85px;
+    /* adjust this value to match your header height */
+}
+
 #experience {
-    padding-top: 50px;
+    padding-top: 30px;
     /* adjust this value to match your header height */
 }
