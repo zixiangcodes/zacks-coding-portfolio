@@ -1,4 +1,5 @@
 /* Media Query for Responsive Layout */
+/* 1025, 768, 480 */
 
 /* For Tablets */
 @media (max-width: 1025px) {
@@ -26,6 +27,11 @@
         /*        max-width: 70%;*/
         padding: 10px;
         /* Reduce padding for small screens */
+    }
+
+    #projects .container {
+        margin-top: -5px;
+        /* To adjust the project container very important */
     }
 
     .about-content img {
@@ -96,6 +102,11 @@
         /* Reduce padding for small screens */
     }
 
+    #projects .container {
+        margin-top: -5px;
+        /* To adjust the project container very important */
+    }
+
     .about-content img {
         width: 120px;
         height: 140px;
@@ -159,7 +170,8 @@
     }
 
     nav li a {
-        font-size: 0.80rem;
+        font-size: 0.75rem;
+        font-weight: bold;
     }
 
     p {
@@ -171,6 +183,11 @@
         /* Adjust as needed */
         padding: 10px;
         /* Reduce padding for small screens */
+    }
+
+    #projects .container {
+        margin-top: -5px;
+        /* To adjust the project container very important */
     }
 
     /* Adjust image size in about section */

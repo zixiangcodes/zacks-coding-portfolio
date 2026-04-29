@@ -101,11 +101,9 @@ a:hover {
     border-top: none;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-md);
+#skills {
+    min-height: 100vh;
+    padding-bottom: 80px;
 }
 
 /* Header & Navigation */
@@ -189,6 +187,16 @@ nav li a {
 }
 
 /* Project Title and Section Words */
+#projects {
+    margin-top: -42px;
+    /* To adjust the top of the projects part, very irritating but it works as there was too much of the background at the top */
+}
+
+#projects .container {
+    margin-top: -15px;
+    /* To adjust the project container very important */
+}
+
 .project-intro,
 .section-intro {
     color: white;
@@ -338,8 +346,8 @@ section h3 u::after {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     /* add this */
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .about-content {
@@ -349,7 +357,8 @@ section h3 u::after {
 }
 
 .about-image img {
-    width: 180px;
+    /* commented to make it oval */
+    /* width: 180px; */
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
@@ -379,6 +388,10 @@ section h3 u::after {
 }
 
 /* Experience Section */
+#coming-soon {
+    margin-top: 24px;
+}
+
 #experience-square {
     background-color: var(--white);
     padding: var(--space-lg);
@@ -477,7 +490,8 @@ section h3 u::after {
     min-height: 96px;
     padding: 12px 8px;
     border-radius: var(--radius-md);
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-500);
+    /* border: 1px solid #888; */
     background: linear-gradient(90deg, rgba(229, 231, 235, 0.2) 0%, rgba(147, 197, 253, 0.22) 100%);
     white-space: normal;
     color: var(--text-dark);

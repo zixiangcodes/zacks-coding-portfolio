@@ -1,11 +1,5 @@
 /* BACKGROUND IMAGES  */
 #projects {
-    margin-top: -42px;
-    /* To adjust the top of the projects part, very irritating but it works as there was too much of the background at the top */
-}
-
-
-#projects {
     background-image: url('../images/background_projects.jpg');
     /* Replace with your background image path */
     background-size: cover;
@@ -26,8 +20,6 @@
     background-size: cover;
     background-position: center;
 }
-
-
 
 #skills {
     background-image: url('../images/background_skills.jpg');

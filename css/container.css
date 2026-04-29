@@ -3,9 +3,12 @@
     margin: 0 auto;
     /* Center align the container horizontally */
 
-    padding: -20px;
+    /* padding: -20px; */
     /* Add some padding for spacing */
+    padding: 0 var(--space-md);
 
+    width: 100%;
+    /* max-width: 1200px; */
     max-width: 800px;
 
     box-sizing: border-box;
@@ -16,9 +19,6 @@
 #projects .container {
     max-width: 2000px;
     /* Adjust the max-width as needed */
-
-    margin-top: -12px;
-    /* To adjust the project container very important */
 
     overflow: hidden;
     /* Removes overflow   */
