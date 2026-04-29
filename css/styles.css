@@ -400,8 +400,8 @@ section h3 u::after {
     box-shadow: var(--shadow-sm);
     overflow-x: hidden;
     /* add this */
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 13px;
+    margin-bottom: 13px;
 }
 
 .skills-intro {
