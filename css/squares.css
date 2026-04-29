@@ -23,6 +23,20 @@
     /* Optional: Add a slight shadow for better visibility */
 }
 
+#experience-square {
+    background-color: #fff;
+    border: 5px solid #ccc;
+
+    /* background-color: var(--white); */
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    min-height: 250px;
+    /* add this */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 #skills-square {
     background-color: #fff;
     border: 5px solid #ccc;

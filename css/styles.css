@@ -392,17 +392,6 @@ section h3 u::after {
     margin-top: 24px;
 }
 
-#experience-square {
-    background-color: var(--white);
-    padding: var(--space-lg);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    min-height: 250px;
-    /* add this */
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 /* Skills Section */
 #skills-square {
     display: block;
