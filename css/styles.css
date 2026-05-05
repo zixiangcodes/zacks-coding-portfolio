@@ -208,6 +208,8 @@ nav li a {
     object-fit: cover;
     box-shadow: var(--shadow-md);
     border: 4px solid var(--primary-light);
+    margin-top: -25px;
+    margin-left: 10px;
 }
 
 .intro-text {

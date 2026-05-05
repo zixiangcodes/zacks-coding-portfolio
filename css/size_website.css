@@ -29,6 +29,11 @@
         /* Reduce padding for small screens */
     }
 
+    .intro-image img {
+        margin-top: -25px;
+        margin-left: 10px;
+    }
+
     .intro-content img {
         width: 150px;
         height: 180px;
@@ -117,6 +122,11 @@
         /*        max-width: 60%;*/
         padding: 10px;
         /* Reduce padding for small screens */
+    }
+
+    .intro-image img {
+        margin-top: -25px;
+        margin-left: 10px;
     }
 
     .intro-content img {
@@ -234,6 +244,11 @@
         /* disables the grid */
     }
 
+    .intro-image img {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
     .intro-content img {
         width: 120px;
         height: 140px;
@@ -261,6 +276,10 @@
     .about-content img {
         width: 120px;
         height: 140px;
+    }
+
+    .self-profile {
+        margin-top: -17px;
     }
 
     #link_linkedin,
