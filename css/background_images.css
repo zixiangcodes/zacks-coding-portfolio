@@ -1,4 +1,13 @@
 /* BACKGROUND IMAGES  */
+/* Need to adjust this */
+#intro {
+    background-image: url('../images/background_intro.jpg');
+    /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+
+}
+
 #projects {
     background-image: url('../images/background_projects.jpg');
     /* Replace with your background image path */
@@ -36,6 +45,11 @@
 }
 
 /*BACKGROUND */
+#intro-background {
+    padding: 50px 0;
+    /* Adjust padding for top and bottom spacing */
+}
+
 #about-background {
     padding: 50px 0;
     /* Adjust padding for top and bottom spacing */

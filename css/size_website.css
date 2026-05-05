@@ -29,6 +29,11 @@
         /* Reduce padding for small screens */
     }
 
+    .intro-content img {
+        width: 150px;
+        height: 180px;
+    }
+
     #projects .container {
         margin-top: 5px;
         /* To adjust the project container very important */
@@ -63,6 +68,7 @@
         margin-right: 20px;
     }
 
+    #intro,
     #projects,
     #about,
     #experience,
@@ -113,6 +119,13 @@
         /* Reduce padding for small screens */
     }
 
+    .intro-content img {
+        width: 120px;
+        height: 140px;
+        flex-direction: column;
+        align-items: center;
+    }
+
     #projects .container {
         margin-top: 5px;
         /* To adjust the project container very important */
@@ -149,6 +162,7 @@
         margin-right: 10px;
     }
 
+    #intro,
     #projects,
     #about,
     #experience,
@@ -161,7 +175,8 @@
         padding-top: 44px;
     }
 
-    .about-image {
+    .about-image,
+    .intro-image {
         margin-bottom: 0px;
     }
 
@@ -203,6 +218,11 @@
         /* Reduce padding for small screens */
     }
 
+    .intro-content img {
+        width: 120px;
+        height: 140px;
+    }
+
     #projects .container {
         margin-top: 5px;
         /* To adjust the project container very important */
@@ -242,6 +262,7 @@
         margin-right: 10px;
     }
 
+    #intro,
     #projects,
     #about,
     #experience,

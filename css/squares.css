@@ -1,4 +1,14 @@
-/* Squares */
+/* Square Box (where content is placed in) */
+#intro-square {
+    background-color: #fff;
+    border: 5px solid #ccc;
+    /* Adjust the border color and size as needed */
+    display: inline-block;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a slight shadow for better visibility */
+}
+
 #projects-square {
     background-color: #fff;
     border: 5px solid #ccc;
@@ -61,6 +71,7 @@
 
 @media (max-width: 1025px) {
 
+    #intro-square,
     #projects-square,
     #about-square,
     #skills-square,
