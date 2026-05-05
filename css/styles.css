@@ -212,6 +212,15 @@ nav li a {
     margin-left: 10px;
 }
 
+.intro-badges {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* controls spacing between badges */
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .intro-text {
     text-align: left;
     margin-right: 10px;
@@ -236,7 +245,7 @@ nav li a {
 .intro-click {
     font-size: 1.0rem;
     color: #6c727b;
-    margin-top: 10px;
+    margin-top: 22px;
     letter-spacing: 0.05em;
     font-weight: 500;
 }
@@ -757,12 +766,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: var(--primary);
     color: var(--white);
     border-radius: 50%;
     transition: transform var(--transition-fast), background-color var(--transition-fast);
+    font-size: 1.40rem;
+    /* increase this to make icons bigger */
 }
 
 .social-icons a:hover {
