@@ -9,6 +9,7 @@
     cursor: grab;
     scrollbar-width: thin;
     scrollbar-color: #aaa transparent;
+    margin-top: -2px;
 }
 
 .experience-slider:active {
@@ -111,9 +112,9 @@
 
 .swipe-hint {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #6c727b;
-    margin-top: 10px;
+    margin-top: 15px;
     letter-spacing: 0.05em;
 }
 
@@ -144,5 +145,18 @@
 
     .experience-list li {
         font-size: 0.80rem;
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+
+    /* Experience Slider */
+    .experience-slider {
+        margin-top: -12px;
+    }
+
+    .swipe-hint {
+        margin-top: 12px;
     }
 }

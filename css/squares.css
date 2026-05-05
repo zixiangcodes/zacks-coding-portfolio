@@ -36,9 +36,9 @@
 #experience-square {
     background-color: #fff;
     border: 5px solid #ccc;
-
     /* background-color: var(--white); */
-    padding: var(--space-lg);
+    padding: var(--space-lg) var(--space-lg) var(--space-sm) var(--space-lg);
+    /* top | right | bottom | left */
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     min-height: 250px;
@@ -47,6 +47,12 @@
     /* margin-bottom: 20px; */
     /* to remove white line on pc */
     margin-bottom: 60px;
+}
+
+@media (max-width: 480px) {
+    #experience-square {
+        padding: var(--space-md) var(--space-lg) var(--space-sm) var(--space-lg);
+    }
 }
 
 #skills-square {
