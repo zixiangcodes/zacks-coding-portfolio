@@ -9,3 +9,26 @@
     /* adjust this value to match your header height */
     scroll-margin-top: 80px;
 }
+
+#intro {
+    margin-top: -95px;
+    /* scroll-margin-top: 80px; */
+    padding-top: 200px;
+    /* adjust this value to match your header height */
+    padding-bottom: 100px;
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+    #intro {
+        padding-top: 150px;
+    }
+}
+
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+    #intro {
+        padding-top: 128px;
+    }
+}

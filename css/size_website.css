@@ -40,7 +40,7 @@
     }
 
     .project-section {
-        margin-top: 22px;
+        margin-top: 12px;
     }
 
     .about-content img {
@@ -127,12 +127,12 @@
     }
 
     #projects .container {
-        margin-top: 5px;
+        margin-top: 12px;
         /* To adjust the project container very important */
     }
 
     .project-section {
-        margin-top: 22px;
+        margin-top: 10px;
     }
 
     .about-content img {
@@ -140,6 +140,12 @@
         height: 140px;
         flex-direction: column;
         align-items: center;
+        /* display: grid; */
+        /* grid-template-columns: 1fr auto; */
+        /* gap: var(--space-lg); */
+        /* old */
+        /* width: 120px; */
+        /* height: 140px; */
     }
 
     #link_linkedin,
@@ -218,9 +224,28 @@
         /* Reduce padding for small screens */
     }
 
+    .intro-profile1 {
+        text-align-last: center;
+    }
+
+    .intro-content {
+        display: block;
+        text-align: center;
+        /* disables the grid */
+    }
+
     .intro-content img {
         width: 120px;
         height: 140px;
+    }
+
+    .intro-text {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    .intro-click {
+        font-size: 0.80rem;
     }
 
     #projects .container {
@@ -229,7 +254,7 @@
     }
 
     .project-section {
-        margin-top: 22px;
+        margin-top: 10px;
     }
 
     /* Adjust image size in about section */

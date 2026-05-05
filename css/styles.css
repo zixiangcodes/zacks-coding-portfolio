@@ -16,6 +16,9 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* match your navbar height */
+    /* may remove later, for testing */
     font-size: 16px;
 }
 
@@ -187,21 +190,8 @@ nav li a {
 }
 
 /* Intro Section */
-#intro {
-    margin-top: -95px;
-    /* To adjust the top of the projects part, very irritating but it works as there was too much of the background at the top */
-}
-
 #intro-square {
     display: inline-block;
-}
-
-.intro-click {
-    font-size: 1.0rem;
-    color: #6c727b;
-    margin-top: 10px;
-    letter-spacing: 0.05em;
-    font-weight: 500;
 }
 
 .intro-content {
@@ -230,15 +220,23 @@ nav li a {
 }
 
 .intro-profile1 {
-    text-align: justify;
+    /* text-align: justify; */
     text-align-last: left;
     /* keeps the final line left-aligned */
 }
 
 .intro-profile2 {
-    text-align: justify;
+    /* text-align: justify; */
     text-align-last: left;
     /* keeps the final line left-aligned */
+}
+
+.intro-click {
+    font-size: 1.0rem;
+    color: #6c727b;
+    margin-top: 10px;
+    letter-spacing: 0.05em;
+    font-weight: 500;
 }
 
 /* Project Title and Section Words */
