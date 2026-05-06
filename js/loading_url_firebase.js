@@ -166,6 +166,7 @@ function generateProjectCards() {
   if (existingCards.length > 0) {
     fetchProjectDetails();
     applyUnderMaintenance();
+    applyHidden();
     return;
   }
 
