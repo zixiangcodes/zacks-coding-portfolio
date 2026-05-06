@@ -44,9 +44,13 @@ const otherLinkIds = [
 
 // 1c. Project IDs to show as "Under Maintenance" (grayed out image + badge)
 const underMaintenanceIds = [
-  "0000",
-  "0014",
-  "0015",
+  "0014", "0015",
+];
+
+// 1d. Project IDs to hide completely 
+// Add any project IDs you want hidden here
+const hiddenIds = [
+  "0000", "0001", "0002", "0003", "0004", "0005", "0006", "0008",
 ];
 
 // Helper function to safely get element and update properties
@@ -190,6 +194,7 @@ function generateProjectCards() {
   // Once cards are generated, fetch titles and descriptions
   fetchProjectDetails();
   applyUnderMaintenance();
+  applyHidden();
 }
 
 // Mark cards as "Under Maintenance" (grayed out image + badge)
@@ -308,6 +313,16 @@ function fetchProjectDetails() {
       if (descEl) descEl.innerHTML = projectDetails[id].description;
       // innerHTML render HTML tags as well.
     }
+  });
+}
+
+// 4. Hide cards completely
+function applyHidden() {
+  hiddenIds.forEach(id => {
+    const img = document.getElementById(`image_${id}`);
+    const card = img?.closest('.project-card');
+    if (!card) return;
+    card.style.display = 'none';
   });
 }
 
