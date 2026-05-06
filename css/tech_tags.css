@@ -1,0 +1,39 @@
+/* New, testing */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 16px 0;
+}
+
+.tech-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff3e0;
+    border: 1.5px solid #ffb74d;
+    border-radius: 50px;
+    padding: 5px 14px;
+    font-size: 13px;
+}
+
+
+/* Old, looks good */
+/* .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0 12px 0;
+} */
+
+/* color: #ffffff !important; */
+/* .tech-tag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 13px;
+} */
