@@ -50,7 +50,7 @@ const underMaintenanceIds = [
 // 1d. Project IDs to hide completely 
 // Add any project IDs you want hidden here
 const hiddenIds = [
-  "0000", "0001", "0002", "0003", "0004", "0005", "0006", "0008",
+  "0000", "0001", "0002", "0003", "0004", "0005", "0006", "0008", "0017",
 ];
 
 // Helper function to safely get element and update properties
