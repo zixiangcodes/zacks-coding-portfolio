@@ -105,7 +105,8 @@ a:hover {
 }
 
 #skills {
-    min-height: 100vh;
+    /* This was causing issues when on mobile => desktop site mode */
+    /* min-height: 100vh; */
     padding-bottom: 80px;
 }
 
