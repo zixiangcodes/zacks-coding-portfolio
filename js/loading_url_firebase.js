@@ -31,7 +31,7 @@ if (hasValidConfig) {
 
 // 1a. Project IDs to load
 const projectIds = [
-  "0019", "0018", "0017", "0016", "0015", "0014", "0013", "0012", "0011", "0010",
+  "0020", "0019", "0018", "0017", "0016", "0015", "0014", "0013", "0012", "0011", "0010",
   "0009", "0008", "0007", "0006", "0005",
   "0004", "0003", "0002", "0001", "0000"
 ];
@@ -39,12 +39,12 @@ const projectIds = [
 // 1b. Other link IDs to update
 const otherLinkIds = [
   "resume", "linkedin", "wordpress", "github",
-  "tree", "goodreads", "story1", "story2", "story3", "oldportfolio", "portfolio_design"
+  "tree", "goodreads", "story1", "story2", "story3", "oldportfolio", "portfolio_design", "whycode"
 ];
 
 // 1c. Project IDs to show as "Under Maintenance" (grayed out image + badge)
 const underMaintenanceIds = [
-  "0014", "0015",
+  "0014", "0015", "0020"
 ];
 
 // 1d. Project IDs to hide completely 
@@ -93,6 +93,7 @@ function updateImage(imageId, src) {
 // 2. Helper function to get project name from id (placeholder)
 function getProjectName(id) {
   const projectNames = {
+    "0020": "ProjectIndigo",
     "0019": "MalaysianJokesApp",
     "0018": "DadJokesGenerator",
     "0017": "CoolOmniWebsite",
@@ -220,6 +221,10 @@ function fetchProjectDetails() {
   // This function would typically fetch project details from Firebase
   // For now, we'll use hardcoded data based on your current HTML
   const projectDetails = {
+    "0020": {
+      title: "Project Indigo",
+      description: "Malaysian App for Malaysians! Just everyday Malaysians showing apps they've made. Vote for what matters. [Currently Work In Progress.]"
+    },
     "0019": {
       title: "Malaysian Jokes App",
       description: "Malaysian Jokes App for Malaysians! Get random jokes and add your own too! Uses Firebase Realtime Database, and basic HTML, CSS and JS. Hosted on Netlify."
